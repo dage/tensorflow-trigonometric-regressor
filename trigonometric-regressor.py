@@ -76,7 +76,7 @@ while not configs.is_empty():
         y=output_verification, 
         shuffle=True,
         batch_size=len(inputs_verification))
-    eval_spec = tf.estimator.EvalSpec(input_fn=eval_input, steps=1)
+    eval_spec = tf.estimator.EvalSpec(input_fn=eval_input, steps=100)
     
     tf.estimator.train_and_evaluate(regressor, train_spec, eval_spec)
 
