@@ -41,7 +41,7 @@ class ConfigPermutation:
 def create_dataset(size):
     inputs = np.linspace(0, 1, size)
     np.random.shuffle(inputs)
-    output = np.array([math.sin(a*PI*2)+math.cos((a+0.2)*PI*4) for a in inputs])    # Trigonometric equation
+    output = np.array([math.sin(a*PI*2)+math.cos((a+0.2)*PI*4) for a in inputs])    # https://www.intmath.com/functions-and-graphs/graphs-using-svg.php?function1=sin(x)%2Bcos(2*(x%2B0.2))&function2=&xMin=0&xMax=6.283&xGrid=3.1416&yMin=-2&yMax=2&yGrid=1&gwidth=600&gheight=300
     return inputs, output
 
 inputs, output = create_dataset(DATASET_SIZE)
